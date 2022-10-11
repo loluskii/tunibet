@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-sm py-3 navbar-light bg-transparent">
       <div class="tl_logo">
         <a href="/">
-          <img src="~/assets/img/logo.png" style="height: 50px" alt="" />
+          <img src="~/assets/img/logo.png" style="height: 75px" alt="" />
         </a>
       </div>
       <!-- <button

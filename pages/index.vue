@@ -1,57 +1,29 @@
 <template>
   <div>
-    <div class="carousel-wrapper ">
-      <VueSlickCarousel v-bind="slickOptions">
-        <div v-for="i in 1" :key="i" class="img-wrapper">
-          <img
-            class="img-fluid"
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1102/banner/1920-1008%20Pragmatic%20Play.png"
-          />
-        </div>
-      </VueSlickCarousel>
-    </div>
+    <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      background="#ababab"
+      img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #333; z-index: -1"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+      <b-carousel-slide
+        img-src="~/assets/img/wop.png"
+      ></b-carousel-slide>
+
+      <b-carousel-slide img-src="~/assets/img/wop-2.png">
+      </b-carousel-slide>
+
+      <b-carousel-slide img-src="~/assets/img/wop-3.png">
+      </b-carousel-slide>
+
+    </b-carousel>
+
     <div class="container-fluid px-4 body-section">
-      <div class="row mb-3 d-none">
-        <div class="col-md-4 col-lg-4">
-          <nuxt-link to="/" class="tl_landing_banner">
-            <div class="card border-0 rounded-3">
-              <img
-                class="card-img-top"
-                src="https://crashcasinos.com/wp-content/uploads/2020/08/crash-entry-cfec08.jpg"
-                alt=""
-              />
-            </div>
-          </nuxt-link>
-        </div>
-        <div class="col-md-4 col-lg-4">
-          <nuxt-link to="/" class="">
-            <div
-              class="card border-0 rounded-3"
-              style="height: 170px; object-fit: contain"
-            >
-              <img
-                class="card-img-top"
-                src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1102/banner/516-302 Games.png"
-                alt=""
-              />
-            </div>
-          </nuxt-link>
-        </div>
-        <div class="col-md-4 col-lg-4">
-          <nuxt-link to="/" class="tl_landing_banner">
-            <div
-              class="card border-0 rounded-3"
-              style="height: 170px; object-fit: contain"
-            >
-              <img
-                class="card-img-top"
-                src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1102/banner/516-302 Statistiques.png"
-                alt=""
-              />
-            </div>
-          </nuxt-link>
-        </div>
-      </div>
 
       <div class="row mb-4">
         <div class="col-6 col-lg-2 mb-2 pr-sm-2 pr-0">
@@ -130,7 +102,7 @@
             >Top Casino Games</nuxt-link
           >
         </div>
-        <div class="row justify-content-center mb-3">
+        <div class="d-none row justify-content-center mb-3">
           <div class="col-lg-4 col-12 mb-3">
             <nuxt-link to="/" class="tl_games_slider_game">
               <div class="card border-0 rounded-3">
@@ -165,6 +137,52 @@
             </nuxt-link>
           </div>
         </div>
+
+              <div class="row mb-3 ">
+        <div class="col-md-4 col-lg-4">
+          <nuxt-link to="/" class="tl_landing_banner">
+            <div class="card border-0 rounded-3">
+              <img
+                class="card-img-top"
+                src="~/assets/img/pol.gif"
+                alt=""
+                style="height: 170px; object-fit: cover"
+              />
+            </div>
+          </nuxt-link>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <nuxt-link to="/" class="">
+            <div
+              class="card border-0 rounded-3"
+              
+            >
+              <img
+                class="card-img-top"
+                src="~/assets/img/nams.png"
+                alt=""
+                style="height: 170px; object-fit: "
+              />
+            </div>
+          </nuxt-link>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <nuxt-link to="/" class="tl_landing_banner">
+            <div
+              class="card border-0 rounded-3"
+              
+            >
+              <img
+                class="card-img-top"
+                src="~/assets/img/mani.png"
+                alt=""
+                style="height: 170px; object-fit: cover"
+              />
+            </div>
+          </nuxt-link>
+        </div>
+      </div>
+
       </div>
     </div>
   </div>
@@ -179,15 +197,18 @@ export default {
 
   data() {
     return {
-      slickOptions: {
-        dots: false,
-        arrows: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
+      slide: 0,
+      sliding: null
     }
   },
+  methods:{
+    onSlideStart(slide) {
+        this.sliding = true
+      },
+      onSlideEnd(slide) {
+        this.sliding = false
+      }
+  }
 }
 </script>
 
@@ -198,43 +219,16 @@ export default {
 .img-wrapper img {
   margin: auto;
   width: 100%;
-  height: 700px;
+  height: 100%;
   background-image: linear-gradient(gray 100%, transparent 0);
 }
 
 .body-section{
-  margin-top: -320px
+  margin-top: -50px
 }
 
-@media screen and (max-width: 320px) {
-  .img-wrapper img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    position: relative;
-    object-position: -120px 0px;
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .img-wrapper img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    position: relative;
-    object-position: -120px 0px;
-    left: 0;
-  }
-}
 
 @media screen and (max-width: 800px) {
-  .img-wrapper img {
-    margin: auto;
-    width: 100%;
-    height: 500px;
-    background-image: linear-gradient(gray 100%, transparent 0);
-  }
   .body-section{
     margin-top: -225px
   }
