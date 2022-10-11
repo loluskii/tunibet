@@ -38,7 +38,7 @@
               v-for="(sp, index) in fixtures"
               :key="index"
             >
-              <div class="card h-100">
+              <div class="highlight-card card h-100">
                 <div class="card-body d-flex flex-column">
                   <p class="text-left mb-4">
                     <span class="flag"></span> {{ sp.sport_category_name }} •

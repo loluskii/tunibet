@@ -11,25 +11,19 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide
-        img-src="~/assets/img/wop.png"
-      ></b-carousel-slide>
+      <b-carousel-slide img-src="~/assets/img/wop.png"></b-carousel-slide>
 
-      <b-carousel-slide img-src="~/assets/img/wop-2.png">
-      </b-carousel-slide>
+      <b-carousel-slide img-src="~/assets/img/wop-2.png"> </b-carousel-slide>
 
-      <b-carousel-slide img-src="~/assets/img/wop-3.png">
-      </b-carousel-slide>
-
+      <b-carousel-slide img-src="~/assets/img/wop-3.png"> </b-carousel-slide>
     </b-carousel>
 
     <div class="container-fluid px-4 body-section">
-
       <div class="row mb-4">
         <div class="col-6 col-lg-2 mb-2 pr-sm-2 pr-0">
           <nuxt-link to="">
             <div class="card landing-card">
-              <div class="card-body  d-flex align-items-center flex-column">
+              <div class="card-body d-flex align-items-center flex-column">
                 <img src="~/assets/img/Sport.png" />
                 <p class="mb-0 mt-auto">SPORT</p>
               </div>
@@ -91,7 +85,7 @@
 
       <Highlights />
       <div class="casino">
-        <div class="px-0  col-12 mb-3">
+        <div class="px-0 col-12 mb-1 mt-3">
           <nuxt-link
             to="/"
             id=""
@@ -102,114 +96,119 @@
             >Top Casino Games</nuxt-link
           >
         </div>
-        <div class="d-none row justify-content-center mb-3">
-          <div class="col-lg-4 col-12 mb-3">
-            <nuxt-link to="/" class="tl_games_slider_game">
-              <div class="card border-0 rounded-3">
+
+        <div class="container-fluid bottom mb-5">
+          <div class="row">
+            <div class="scrollcards">
+              <div class="card">
                 <img
                   class="card-img-top"
-                  src="~/assets/img/spaceman.png"
+                  src="~/assets/img/nams.png"
                   alt=""
+                  style="height: 170px; object-fit: "
                 />
               </div>
-            </nuxt-link>
-          </div>
-          <div class="col-lg-4 col-12 mb-3">
-            <nuxt-link to="/" class="tl_games_slider_game">
-              <div class="card border-0 rounded-3">
+              <div class="card">
                 <img
+                  class="card-img-top"
+                  src="~/assets/img/mani.png"
+                  alt=""
+                  style="height: 170px; object-fit: cover"
+                />
+              </div>
 
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="~/assets/img/male-dealer.png"
+                  alt=""
+                  style="height: 170px; object-fit: cover"
+                />
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="~/assets/img/640x300.jpg"
+                  alt=""
+                  style="height: 170px; object-fit: cover"
+                />
+              </div>
+
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="~/assets/img/600x364.jpg"
+                  alt=""
+                  style="height: 170px; object-fit: cover"
+                />
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="~/assets/img/Firebird-Spirit_667x414.png"
+                  alt=""
+                  style="height: 170px; object-fit: cover"
+                />
+              </div>
+
+              <div class="card">
+                <img
+                  class="card-img-top"
                   src="~/assets/img/rocketman.png"
                   alt=""
+                  style="height: 170px; object-fit: cover"
                 />
               </div>
-            </nuxt-link>
-          </div>
-          <div class="col-lg-4 col-12 mb-3">
-            <nuxt-link to="/" class="tl_games_slider_game">
-              <div class="card border-0 rounded-3">
+              <div class="card">
                 <img
                   class="card-img-top"
                   src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1102/banner/Casino_Game_4.png"
                   alt=""
+                  style="height: 170px; object-fit: cover"
                 />
               </div>
-            </nuxt-link>
+
+
+
+            </div>
           </div>
         </div>
-
-              <div class="row mb-3 ">
-        <div class="col-md-4 col-lg-4">
-          <nuxt-link to="/" class="tl_landing_banner">
-            <div class="card border-0 rounded-3">
-              <img
-                class="card-img-top"
-                src="~/assets/img/pol.gif"
-                alt=""
-                style="height: 170px; object-fit: cover"
-              />
-            </div>
-          </nuxt-link>
-        </div>
-        <div class="col-md-4 col-lg-4">
-          <nuxt-link to="/" class="">
-            <div
-              class="card border-0 rounded-3"
-              
-            >
-              <img
-                class="card-img-top"
-                src="~/assets/img/nams.png"
-                alt=""
-                style="height: 170px; object-fit: "
-              />
-            </div>
-          </nuxt-link>
-        </div>
-        <div class="col-md-4 col-lg-4">
-          <nuxt-link to="/" class="tl_landing_banner">
-            <div
-              class="card border-0 rounded-3"
-              
-            >
-              <img
-                class="card-img-top"
-                src="~/assets/img/mani.png"
-                alt=""
-                style="height: 170px; object-fit: cover"
-              />
-            </div>
-          </nuxt-link>
-        </div>
-      </div>
-
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Highlights from '~/components/Highlights'
+import Highlights from "~/components/Highlights";
 export default {
   components: { Highlights },
-  name: 'home',
-  layout: 'default',
+  name: "home",
+  layout: "default",
 
   data() {
     return {
       slide: 0,
-      sliding: null
-    }
-  },
-  methods:{
-    onSlideStart(slide) {
-        this.sliding = true
+      sliding: null,
+      slickOptions: {
+        dots: true,
+        focusOnSelect: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        touchThreshold: 5,
       },
-      onSlideEnd(slide) {
-        this.sliding = false
-      }
-  }
-}
+    };
+  },
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
+    },
+  },
+};
 </script>
 
 <style>
@@ -223,24 +222,33 @@ export default {
   background-image: linear-gradient(gray 100%, transparent 0);
 }
 
-.body-section{
-  margin-top: -50px
+.body-section {
+  margin-top: -50px;
 }
 
+@media screen and (max-width: 600px) {
+  .body-section {
+    margin-top: -25px;
+  }
 
-@media screen and (max-width: 800px) {
-  .body-section{
-    margin-top: -225px
+  .carousel .carousel-inner .carousel-item img {
+    min-height: 500px;
+    object-fit: cover;
+    /* object-position: 10px 50px ; */
   }
 }
 
+.carousel .carousel-inner .carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  /* object-position: 10px 50px ; */
+}
 
 .bg-black {
   background: #000;
 }
 
-.tl_games_slider_game img
-{
+.tl_games_slider_game img {
   height: 320px;
   width: 100%;
   object-fit: cover;
@@ -250,12 +258,51 @@ export default {
   background-color: #333;
   color: white;
   height: 120px;
+  border: none !important;
 }
 
 .landing-card img {
   width: 50px;
 }
 
+.bottom {
+  margin-top: 40px;
+}
 
+.highlight-card.card {
+  border: 2px solid #f9a329;
+  margin: 10px 4px;
+  transition: 0.6s ease;
+}
+.card {
+  border: none;
+  margin: 10px 20px 10px 0;
+  transition: 0.6s ease;
+}
 
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-block {
+  padding: 10px;
+}
+
+.scrollcards {
+  /* background-color: #fff; */
+  overflow: auto;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+div.scrollcards .card {
+  display: inline-block;
+  height: 170px;
+  width: 350px;
+}
 </style>
