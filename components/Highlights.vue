@@ -34,7 +34,7 @@
           <div class="row row-cols-1 row-cols-md-3 g-4" v-if="fixtures.length">
             <!-- <p>{{ fixtures }}</p> -->
             <div
-              class="col-4 mb-3"
+              class="col-lg-4 col-12 mb-3"
               v-for="(sp, index) in fixtures"
               :key="index"
             >
@@ -112,7 +112,7 @@ export default {
           'https://sports-api.sportsbookengine.com/api/sports/mobile/highlights'
         )
         .then((res) => {
-          this.fixtures = res.data[0].fixtures
+          this.fixtures = res.data[0].fixtures.splice(0,3)
 
           // console.log(res.data[0])
           this.loading = false
